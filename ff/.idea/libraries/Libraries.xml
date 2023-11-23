@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Libraries">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/ProyectoFinal/src/Libraries/jfoenix-9.0.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ProyectoFinal/src/Libraries/jfoenix-17.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ProyectoFinal/src/Libraries/AnimateFX-1.2.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

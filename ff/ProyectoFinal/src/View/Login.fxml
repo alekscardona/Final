@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane fx:id="visual" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="238.0" prefWidth="327.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoginController">
+   <children>
+      <Pane prefHeight="238.0" prefWidth="327.0">
+         <children>
+            <GridPane layoutX="15.0" layoutY="130.0">
+               <children>
+                  <Label text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                  <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                  <TextField fx:id="user" promptText="Ingresa tu usuario" style="-fx-background-color: #A8DBFE;" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                  <PasswordField fx:id="password" promptText="Ingrese su contraseña" style="-fx-background-color: #A8DBFE;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="148.0" minWidth="10.0" prefWidth="109.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="228.0" minWidth="10.0" prefWidth="189.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="29.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+            <Button alignment="CENTER" defaultButton="true" layoutX="56.0" layoutY="199.0" mnemonicParsing="false" onAction="#ingresar" text="ingresar" />
+            <ImageView fitHeight="96.0" fitWidth="112.0" layoutX="115.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Source/login.png" />
+               </image>
+            </ImageView>
+            <Button alignment="CENTER" defaultButton="true" layoutX="188.0" layoutY="199.0" mnemonicParsing="false" onAction="#registrar" text="Registrar" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

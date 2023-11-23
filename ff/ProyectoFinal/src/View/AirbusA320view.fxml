@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="646.0" prefWidth="1200.0" style="-fx-background-color: #323232;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.SeleccionAsientoController">
+   <children>
+      <Pane layoutX="31.0" layoutY="34.0" prefHeight="520.0" prefWidth="1134.0" style="-fx-background-color: #1D6561; -fx-background-radius: 20px;">
+         <children>
+            <ImageView blendMode="MULTIPLY" fitHeight="442.0" fitWidth="1134.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../source/Asientos%20avion.jpg" />
+               </image>
+            </ImageView>
+            <Pane layoutX="159.0" layoutY="178.0" prefHeight="166.0" prefWidth="823.0" style="-fx-background-color: GRAY;">
+               <children>
+                  <Label layoutX="10.0" layoutY="6.0" text="A" />
+                  <Label layoutX="9.0" layoutY="46.0" text="C" />
+                  <Label layoutX="10.0" layoutY="111.0" text="D" />
+                  <Label layoutX="10.0" layoutY="141.0" text="F" />
+                  <Separator layoutX="169.0" layoutY="4.0" orientation="VERTICAL" prefHeight="153.0" prefWidth="6.0" />
+                  <Label layoutX="187.0" layoutY="8.0" text="A" />
+                  <Label layoutX="187.0" layoutY="31.0" text="B" />
+                  <Label layoutX="187.0" layoutY="55.0" text="C" />
+                  <Label layoutX="187.0" layoutY="95.0" text="D" />
+                  <Label layoutX="188.0" layoutY="121.0" text="E" />
+                  <Label layoutX="188.0" layoutY="144.0" text="F" />
+                  <Label layoutX="43.0" layoutY="72.0" text="1" />
+                  <Label layoutX="71.0" layoutY="72.0" text="2" />
+                  <Label layoutX="100.0" layoutY="72.0" text="3" />
+                  <Label layoutX="124.0" layoutY="72.0" text="4" />
+                  <Pane layoutX="412.0" layoutY="16.0" prefHeight="134.0" prefWidth="392.0" style="-fx-background-color: BLACK;" />
+                  <GridPane fx:id="gridEconomicoB" gridLinesVisible="true" layoutX="212.0" layoutY="90.0" prefHeight="74.0" prefWidth="171.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="29.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <GridPane fx:id="gridEjecutivoA" gridLinesVisible="true" layoutX="27.0" layoutY="2.0" prefHeight="68.0" prefWidth="119.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+                  <GridPane fx:id="gridEconomicoA" gridLinesVisible="true" layoutX="212.0" layoutY="2.0" prefHeight="74.0" prefWidth="171.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="29.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </children></Pane>
+            <GridPane fx:id="gridEjecutivoB" gridLinesVisible="true" layoutX="186.0" layoutY="277.0" prefHeight="68.0" prefWidth="119.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+            <Pane layoutX="273.0" layoutY="399.0" prefHeight="29.0" prefWidth="563.0" style="-fx-background-color: #1D6561;" />
+            <Pane layoutX="159.0" layoutY="117.0" prefHeight="57.0" prefWidth="833.0" style="-fx-background-color: #1D6561;" />
+            <Label layoutX="379.0" layoutY="349.0" text="1" />
+            <Label layoutX="406.0" layoutY="349.0" text="2" />
+            <Label layoutX="437.0" layoutY="349.0" text="3" />
+            <Label layoutX="461.0" layoutY="349.0" text="4" />
+            <Label layoutX="488.0" layoutY="349.0" text="5" />
+            <Label layoutX="519.0" layoutY="349.0" text="6" />
+         </children>
+      </Pane>
+      <Button fx:id="btnSeleccionar" layoutX="449.0" layoutY="575.0" mnemonicParsing="false" onAction="#actnBtnSeleccionar" prefHeight="44.0" prefWidth="298.0" style="-fx-background-color: GRAY;" text="SELECCIONAR" textFill="WHITE">
+         <font>
+            <Font name="Cooper Black" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>
