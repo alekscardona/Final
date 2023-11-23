@@ -99,7 +99,6 @@ public class Aerolinea {
 	 */
 	@SuppressWarnings("unchecked")
 	public void inicializarDatos(){
-		aniadir();
 		 Ciudad ciudadMonterrey = new Ciudad();
 		 ciudadMonterrey.setNombre("Monterrey");
 		 listaCiudadesAerolinea.agregarInicio(ciudadMonterrey);
@@ -142,41 +141,5 @@ public class Aerolinea {
 
 	}
 	//solo se debe llamar una vez para inicar la 
-	public void aniadir() {
-        TreeSet<Cliente> listaClientes = leerClientesDesdeArchivo();
-
-        if (listaClientes.isEmpty()) {
-            listaClientes.add(new Cliente("Camilo", "Lopez", "tebaida", "camilin@gmail.com", "952405", "24/11/2000", new ArrayList<>()));
-            listaClientes.add(new Cliente("Aleks", "Cardona", "Coliseo", "Alesito@gmail.com", "446354", "17/11/2003", new ArrayList<>()));
-            
-
-            // Guarda la lista actualizada en el archivo
-            escribirClientesEnArchivo(listaClientes);
-        }
-    }
-
-    private TreeSet<Cliente> leerClientesDesdeArchivo() {
-        TreeSet<Cliente> listaClientes = new TreeSet<>();
-        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("src/archivos/clientes.dat"))) {
-            listaClientes = (TreeSet<Cliente>) ois.readObject();
-        } catch (FileNotFoundException e) {
-            System.err.println("Error: Archivo de clientes no encontrado.");
-            e.printStackTrace();
-        } catch (IOException | ClassNotFoundException e) {
-            System.err.println("Error al deserializar clientes.");
-            e.printStackTrace();
-        }
-        return listaClientes;
-    }
-
-    private void escribirClientesEnArchivo(TreeSet<Cliente> listaClientes) {
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("src/archivos/clientes.dat"))) {
-            oos.writeObject(listaClientes);
-        } catch (IOException e) {
-            System.err.println("Error al escribir en el archivo de clientes.");
-            e.printStackTrace();
-        }
-    }
-
-
+	
 }

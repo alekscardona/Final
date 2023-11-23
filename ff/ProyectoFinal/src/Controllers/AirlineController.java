@@ -1,18 +1,13 @@
 package Controllers;
 
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.HashSet;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.TreeSet;
 
@@ -84,7 +79,6 @@ public class AirlineController {
 		ChatApp a = new ChatApp();
 		a.main(null);
 	}
-	
 	
 	///////////////////////////////////////////////////////////////////////////////
 	
@@ -312,7 +306,6 @@ public class AirlineController {
 	 * @throws ClassNotFoundException
 	 * @throws NumberFormatException
 	 */
-	 @SuppressWarnings("unchecked")
     @FXML
     void actnAsientos(ActionEvent event) throws IOException, ClassNotFoundException, NumberFormatException {
     	   
@@ -325,9 +318,9 @@ public class AirlineController {
 
     	        if ((Integer.parseInt(altoPeso.getText()) + Integer.parseInt(anchoPeso.getText()) + Integer.parseInt(altoPeso.getText()) > 170 && comBoxClase.getValue().equals("Ejecutiva"))
     	                || (Integer.parseInt(altoPeso.getText()) + Integer.parseInt(anchoPeso.getText()) + Integer.parseInt(altoPeso.getText()) > 110 && comBoxClase.getValue().equals("Economica"))) {
-    	            JOptionPane.showMessageDialog(null, "Las dimensiones del peso superan el límite");
+    	            JOptionPane.showMessageDialog(null, "Las dimensiones del peso superan el limite");
     	        } else
-    	            JOptionPane.showMessageDialog(null, "Seleccione toda la información que se solicita");
+    	            JOptionPane.showMessageDialog(null, "Seleccione toda la informaciï¿½n que se solicita");
 
     		}else{
     		System.out.println(rutaSeleccionada.getDestino().getNombre());
@@ -726,7 +719,7 @@ public class AirlineController {
 					listaUsuarios.add(cliente);
 				}
 			}
-			JOptionPane.showMessageDialog(null, "Tarjeta añadida con exito");
+			JOptionPane.showMessageDialog(null, "Tarjeta aï¿½adida con exito");
 			paneTarjeta.setVisible(false);
 		}
 		ObjectOutputStream clienteEscribir = new ObjectOutputStream(new FileOutputStream("src/archivos/clientes.dat"));
@@ -807,7 +800,7 @@ public class AirlineController {
     		clienteEscribir.close();
 
     	
-    		JOptionPane.showMessageDialog(null, "Gracias por usar nuestros servicios señor "+clienteEncontrado.getNombre());
+    		JOptionPane.showMessageDialog(null, "Gracias por usar nuestros servicios seï¿½or "+clienteEncontrado.getNombre());
     		cerrarPanes();
     		paneMenuP.setVisible(true);
 
@@ -958,38 +951,38 @@ public class AirlineController {
     }
 
     /**
-     * Método de inicialización para el controlador de la interfaz de usuario de la aplicación.
-     * Se ejecuta automáticamente al cargar la interfaz gráfica.
+     * Mï¿½todo de inicializaciï¿½n para el controlador de la interfaz de usuario de la aplicaciï¿½n.
+     * Se ejecuta automï¿½ticamente al cargar la interfaz grï¿½fica.
      */
     @FXML
     void initialize() {
-        // Inicialización de datos de la aerolínea
+        // Inicializacion de datos de la aerolinea
         aerolinea.inicializarDatos();
         
-        // Obtención de la lista de usuarios desde la aerolínea
+        // Obtenciï¿½n de la lista de usuarios desde la aerolï¿½nea
         listaUsuarios = aerolinea.getListaUsuarios();
         
-        // Impresión de la lista de usuarios en la consola
+        // Impresiï¿½n de la lista de usuarios en la consola
         System.out.println(listaUsuarios);
         
-        // Configuración de opciones en ComboBox para la clase de vuelo (Economica, Ejecutiva)
+        // Configuraciï¿½n de opciones en ComboBox para la clase de vuelo (Economica, Ejecutiva)
         comBoxClase.getItems().addAll("Economica", "Ejecutiva");
         
-        // Configuración de opciones en ComboBox para el origen del vuelo (CDMX, BGTA)
+        // Configuraciï¿½n de opciones en ComboBox para el origen del vuelo (CDMX, BGTA)
         comBoxOrigen.getItems().add("CDMX");
         comBoxOrigen.getItems().add("BGTA");
         
-        // Obtención de la lista de rutas desde la aerolínea
+        // Obtenciï¿½n de la lista de rutas desde la aerolï¿½nea
         ArrayList<Ruta> destinos = aerolinea.getListaRutas();
         
-        // Configuración de opciones en ComboBox para el destino del vuelo utilizando la lista de rutas
+        // Configuraciï¿½n de opciones en ComboBox para el destino del vuelo utilizando la lista de rutas
         for (int i = 0; i < destinos.size(); i++) {
             comBoxDestino.getItems().add(destinos.get(i).getDestino().getNombre());
         }
 
-        // Configuración de un listener para la selección de elementos en la tabla de rutas
+        // Configuraciï¿½n de un listener para la selecciï¿½n de elementos en la tabla de rutas
         tableRutas.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
-            // Actualización de la ruta seleccionada y visibilidad de un panel relacionado con el equipaje
+            // Actualizaciï¿½n de la ruta seleccionada y visibilidad de un panel relacionado con el equipaje
             rutaSeleccionada = newSelection;
             paneEquipaje.setVisible(true);
         });

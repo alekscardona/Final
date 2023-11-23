@@ -24,7 +24,6 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
 import Chat.Hilos_CLiente.Servidor_hilo;
-import Chat.chat.ChatInterfaz;
 
 
 
@@ -148,7 +147,7 @@ public class Servidor extends JFrame {
 
 		btnApagarServidor = new JButton("Apagar Servidor");
 		btnApagarServidor.addActionListener(e -> {
-			int confirm = JOptionPane.showConfirmDialog(this, "¿Desea apagar el servidor?", "Apagar Servidor",
+			int confirm = JOptionPane.showConfirmDialog(this, "ï¿½Desea apagar el servidor?", "Apagar Servidor",
 					JOptionPane.YES_NO_OPTION);
 			if (confirm == JOptionPane.YES_OPTION) {
 				cerrarServidor();

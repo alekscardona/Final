@@ -10,13 +10,13 @@ public class ReiniciarArchivoDat {
         String directorioProyecto = System.getProperty("user.dir");
         
         // Nombre del archivo .dat con ruta relativa al directorio del proyecto
-        String nombreArchivo = directorioProyecto + "/src/archivos/clientesRecuperacion.dat";
+        String nombreArchivo = directorioProyecto + "/src/archivos/clientes.dat";
 
         // Reiniciar el archivo .dat
         reiniciarArchivo(nombreArchivo);
     }
 
-    // Método para reiniciar (borrar todo el contenido) de un archivo .dat
+    // Mï¿½todo para reiniciar (borrar todo el contenido) de un archivo .dat
     private static void reiniciarArchivo(String nombreArchivo) {
         File archivo = new File(nombreArchivo);
 

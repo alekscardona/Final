@@ -45,16 +45,23 @@ public class Usuario {
 
     public void validacionIngreso(LoginController controlador) {
     	try {
+  
         usuarios();
         Main inicio = new Main();
         // Recorre el HashMap y compara las credenciales
         for (String username : usuarios.keySet()) {
             String clave = usuarios.get(username);
             
-            if (user.equals(username) && password.equals(clave)) {       
+            if (user.equals(username) && password.equals(clave)) {   
+            	if(user.equals("Camilo")) {
                      inicio.mostarPrincipal();
                      controlador.cerrar();
-                    
+            	}
+            	
+            	else if(user.equals("Aleks")) {
+            		inicio.mostarPrincipal();
+                    controlador.cerrar();
+           	}
                     
 
                 return;

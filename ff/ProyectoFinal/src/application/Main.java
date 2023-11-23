@@ -23,7 +23,6 @@ public class Main extends Application {
 
     public Main() {
         primaryStage = new Stage();
-        primaryStage.setTitle("Gestor de Procesos");
     }
 
 	
@@ -31,7 +30,7 @@ public class Main extends Application {
 	  @Override
       public void start(Stage primaryStage)  throws Exception{
           this.primaryStage = primaryStage;
-      mostarPrincipal();;
+      mostarPrincipal();
 
   }
 	

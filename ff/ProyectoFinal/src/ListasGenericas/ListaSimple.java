@@ -23,7 +23,7 @@ public class ListaSimple<T> implements Iterable<T>, Serializable{
 
 	public ListaSimple() {
 		nodoPrimero = null;
-		nodoPrimero = null;
+		nodoUltimo = null;
 		tamanio = 0;
 	}
 

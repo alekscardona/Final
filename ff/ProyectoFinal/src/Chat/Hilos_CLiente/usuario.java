@@ -11,6 +11,7 @@ import java.net.Socket;
 
 import Chat.chat.ChatInterfaz;
 
+
 public class usuario {
 
 	private InetAddress direccionIP;

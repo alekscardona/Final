@@ -34,7 +34,6 @@
                   <Image url="@../Source/login.png" />
                </image>
             </ImageView>
-            <Button alignment="CENTER" defaultButton="true" layoutX="188.0" layoutY="199.0" mnemonicParsing="false" onAction="#registrar" text="Registrar" />
          </children>
       </Pane>
    </children>
